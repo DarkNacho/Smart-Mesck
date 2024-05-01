@@ -1,0 +1,9 @@
+[submodule "hapi-fhir-jpaserver-starter"]
+	path = hapi-fhir-jpaserver-starter
+	url = https://github.com/DarkNacho/hapi-fhir-jpaserver-starter.git
+[submodule "Smart-Mesck-Web"]
+	path = Smart-Mesck-Web
+	url = https://github.com/DarkNacho/Smart-Mesck-Web.git
+[submodule "Smart-Mesck-Server"]
+	path = Smart-Mesck-Server
+	url = https://github.com/DarkNacho/Smart-Mesck-Server.git
