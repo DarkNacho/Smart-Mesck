@@ -38,3 +38,20 @@ El análisis es un proceso de conversión de una cadena válida en un objeto FHI
 ## Búsqueda
 
 Esta es la operación más importante y frecuente que puede realizar en un Servidor FHIR. No todas las organizaciones tienen su propio servidor FHIR ni necesitan tener uno, por lo que no necesitan realizar otras operaciones con tanta frecuencia como la operación de búsqueda. Por ejemplo: supongamos que un hospital cumple totalmente con la especificación FHIR en su trabajo y forma de almacenar los datos y tiene un sistema implementado para utilizar este sistema. Cuando un paciente viene al hospital para un chequeo, lo primero que hará el hospital es conectar registros médicos comunes y buscar los registros del paciente. FHIR admite de forma nativa operaciones de búsqueda muy potentes. El cliente FHIR sólo hace que estas operaciones de búsqueda sean más simples, rápidas y eficientes.
+
+
+
+
+## FHIR Exchange Module
+
+FHIR está diseñado como una especificación de interfaz: especifica el contenido de los datos intercambiados entre aplicaciones de atención médica y cómo se implementa y gestiona el intercambio. FHIR define los siguientes métodos para intercambiar datos entre sistemas. Cada uno de los métodos está destinado a un caso de uso específico y tiene ventajas y desventajas. El método que se podría utilizar dependerá del caso de uso.
+
+1. **API REST**: la mayoría de las implementaciones se centran en aplicaciones API REST. Esta es una API cliente/servidor diseñada para seguir los principios del diseño REST para operaciones de **creación**, **lectura**, **actualización** y **eliminación** (CRUD), junto con soporte de búsqueda y ejecución (operaciones).
+
+1. **Mensajería**: admite el intercambio entre sistemas mediante el envío de mensajes enrutados de un sistema a otro. Este intercambio se puede implementar en la API REST o mediante alguna otra tecnología de mensajería.
+
+1. **Documentos**: En este contenido a intercambiar está envuelto por una Composición que proporciona el contexto del contenido, y que tiene una presentación fija para un lector humano. El marco del documento se proporciona para ayudar con los usos de comunicación de persona a persona asistida por computadora, que no son infrecuentes en la atención médica.
+
+1. **Base de datos/Almacén persistente**: Otra forma de hacer uso de los recursos definidos por FHIR es almacenarlos de forma nativa en una base de datos o almacén persistente, donde diferentes aplicaciones o módulos escriben y leen los recursos como parte de su implementación.
+
+![FHIR APIR Request Example](./resources/FHIR_Request_Example.webp "FHIR Request Example")

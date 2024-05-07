@@ -1,7 +1,9 @@
-site_name: Titulo
+site_name: Smart Mesck
 site_url: 
 theme:
   name: material
+  logo: smart-mesck-logo.png
+  favicon: smart-mesck-logo.png
   nav:
 
   features:
@@ -42,7 +44,7 @@ extra:
       link: https://twitter.com
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com
-
+  
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
