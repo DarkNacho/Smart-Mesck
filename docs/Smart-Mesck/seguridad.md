@@ -1,6 +1,6 @@
 # Seguridad
 
-n términos de seguridad, este sistema utiliza autentificación basada en JWT, o JSON Web Tokens. Un JWT es una forma segura de representar reclamaciones que se pueden transferir entre dos partes. En el contexto de la autentificación, después de que un usuario inicia sesión con sus credenciales, el servidor crea un JWT que contiene información identificativa del usuario y lo envía de vuelta al usuario.
+En términos de seguridad, este sistema utiliza autentificación basada en JWT, o JSON Web Tokens. Un JWT es una forma segura de representar reclamaciones que se pueden transferir entre dos partes. En el contexto de la autentificación, después de que un usuario inicia sesión con sus credenciales, el servidor crea un JWT que contiene información identificativa del usuario y lo envía de vuelta al usuario.
 
 Este token se incluye luego en el encabezado de cada solicitud que el usuario hace al servidor. Cuando el servidor recibe una solicitud, puede verificar el JWT para confirmar que el usuario es quien dice ser y proporcionar acceso a los recursos solicitados. Este método de autentificación es seguro y eficiente, y es ampliamente utilizado en aplicaciones web modernas.
 
@@ -38,3 +38,5 @@ Dado que Smart Mesck Web funciona como el [cliente FHIR](/FHIR/fhirclient/#conex
 HAPI FHIR no cuenta con una forma de autentificación integrada por lo que fue necesario agregar una para manejarlo junto a las reglas de acceso y visibilidad de recursos.
 
 Internamente funciona como un Interceptor, el cual intercepta todas las solicitudes al servicio para verificar que estos contengan la autentificación correcta y decidir si puede acceder o no a lo que está solicitando.
+
+![sequence](./resources/hapi_authorizationinterceptor_read_normal.svg "sequence")
